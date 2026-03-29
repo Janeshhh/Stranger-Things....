@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stranger Things</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <!-- Navigation Overlay -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="st-logo">STRANGER</span>
+            <span class="st-logo">THINGS</span>
+        </div>
+        <nav>
+            <button class="nav-btn active" data-target="home">Home</button>
+            <button class="nav-btn" data-target="characters">Characters</button>
+            <button class="nav-btn" data-target="episodes">Episodes</button>
+            <button class="nav-btn" data-target="plot">Plot</button>
+            <button class="nav-btn" data-target="gallery">Gallery</button>
+        </nav>
+    </header>
+
+    <main class="content-area">
+        <!-- HOME PAGE -->
+        <section id="home" class="page active">
+            <div class="hero-section">
+                <div class="hero-bg" style="background-image: url('Background.jpg');"></div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="season-tab-btn active hero-btn"
+                    onclick="document.querySelector('.nav-btn[data-target=\'characters\']').click()">Enter the Upside
+                    Down</button>
+            </div>
+        </section>
+
+        <!-- CHARACTERS PAGE -->
+        <section id="characters" class="page">
+            <div class="page-header">
+                <h1>CHARACTERS</h1>
+                <p>Meet the heroes and allies who stand together for the final<br>battle against the darkness</p>
+            </div>
+
+            <div class="character-grid">
+                <!-- Data populated via JS, but can also be static. Using static for SEO and faster render -->
+                <div class="card char-card" data-name="eleven">
+                    <img src="Millie.jpg" alt="Eleven" class="card-img">
+                    <div class="card-overlay">
+                        <h3>Eleven</h3>
+                        <p class="irl-name">Millie Bobby Brown</p>
+                        <p class="char-desc">A young girl with telekinetic powers who escaped from Hawkins Laboratory.</p>
+                    </div>
+                </div>
+                <div class="card char-card" data-name="mike">
+                    <img src="Finn.jpg" alt="Mike Wheeler" class="card-img">
+                    <div class="card-overlay">
+                        <h3>Mike</h3>
+                        <p class="irl-name">Finn Wolfhard</p>
+                        <p class="char-desc">The loyal and determined leader of the party who never gives up on his friends.</p>
+                    </div>
+                </div>
+                <div class="card char-card" data-name="dustin">
+                    <img src="Dustin.jpg" alt="Dustin Henderson" class="card-img">
+                    <div class="card-overlay">
+                        <h3>Dustin</h3>
+                        <p class="irl-name">Gaten Matarazzo</p>
+                        <p class="char-desc">The charming, science-loving peacemaker of the group with a knack for technology.</p>
+                    </div>
+                </div>
+                <div class="card char-card" data-name="lucas">
+                    <img src="Lucas.jpg" alt="Lucas Sinclair" class="card-img">
+                    <div class="card-overlay">
+                        <h3>Lucas</h3>
+                        <p class="irl-name">Caleb McLaughlin</p>
+                        <p class="char-desc">The pragmatic and brave ranger of the party who relies on logic and his wrist-rocket.</p>
+                    </div>
+                </div>
+                <div class="card char-card" data-name="will">
+                    <img src="Will.jpg" alt="Will Byers" class="card-img">
+                    <div class="card-overlay">
+                        <h3>Will</h3>
+                        <p class="irl-name">Noah Schnapp</p>
+                        <p class="char-desc">The sensitive and creative boy whose mysterious disappearance started it all.</p>
+                    </div>
+                </div>
+                <div class="card char-card" data-name="max">
+                    <img src="Max.jpg" alt="Max Mayfield" class="card-img">
+                    <div class="card-overlay">
+                        <h3>Max</h3>
+                        <p class="irl-name">Sadie Sink</p>
+                        <p class="char-desc">A tough skateboarding tomboy who bravely faces the darkness of her past and the Upside Down.</p>
+                    </div>
+                </div>
+                <div class="card char-card" data-name="steve">
+                    <img src="Steve.jpg" alt="Steve Harrington" class="card-img">
+                    <div class="card-overlay">
+                        <h3>Steve</h3>
+                        <p class="irl-name">Joe Keery</p>
+                        <p class="char-desc">The former high school king turned protective, baseball-bat-wielding babysitter.</p>
+                    </div>
+                </div>
+                <div class="card char-card" data-name="hopper">
+                    <img src="Hopper.jpg" alt="Jim Hopper" class="card-img">
+                    <div class="card-overlay">
+                        <h3>Hopper</h3>
+                        <p class="irl-name">David Harbour</p>
+                        <p class="char-desc">The gruff but caring Hawkins Police Chief who protests his town and adoptive daughter.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EPISODES PAGE -->
+        <section id="episodes" class="page">
+            <div class="page-header">
+                <h1>EPISODES</h1>
+                <p>Relive the journey from the beginning. Navigate<br>through seasons to uncover the truth.</p>
+            </div>
+
+            <div class="season-tabs" id="season-tabs">
+                <!-- Generated via JS -->
+            </div>
+
+            <div class="season-info" id="season-info">
+                <!-- Season Title and Count inserted via JS -->
+            </div>
+
+            <div class="episode-list" id="episode-list">
+                <!-- Episodes injected via JS -->
+            </div>
+        </section>
+
+        <!-- PLOT PAGE -->
+        <section id="plot" class="page">
+            <div class="page-header">
+                <h1>THE PLOT</h1>
+                <p>A small town, a dark secret, and a dimensional<br>tear that changes everything.</p>
+            </div>
+
+            <div class="plot-container">
+                <div class="plot-card">
+                    <div class="season-number">SEASON 1</div>
+                    <div class="plot-text">
+                        When a young boy vanishes, a small town uncovers a mystery involving secret experiments,
+                        terrifying supernatural forces, and one strange little girl.
+                    </div>
+                </div>
+                <div class="plot-card">
+                    <div class="season-number">SEASON 2</div>
+                    <div class="plot-text">
+                        It's 1984 and the citizens of Hawkins are still reeling from the horrors of the Demogorgon. A
+                        bigger, sinister entity threatens those who survived.
+                    </div>
+                </div>
+                <div class="plot-card">
+                    <div class="season-number">SEASON 3</div>
+                    <div class="plot-text">
+                        Summer of 1985 brings a new mall, romance, and new enemies. As the Mind Flayer finds a new host,
+                        everyone must band together to survive.
+                    </div>
+                </div>
+                <div class="plot-card">
+                    <div class="season-number">SEASON 4</div>
+                    <div class="plot-text">
+                        Separated across the globe, our heroes face Vecna, a terrifying new threat from the Upside Down
+                        whose gruesome curse shakes the foundation of Hawkins.
+                    </div>
+                </div>
+                <div class="plot-card">
+                    <div class="season-number">SEASON 5</div>
+                    <div class="plot-text">
+                        The ultimate battle approaches. As the Upside Down bleeds into Hawkins in unprecedented ways,
+                        the final stand against the darkness begins.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY PAGE -->
+        <section id="gallery" class="page">
+            <div class="page-header">
+                <h1>GALLERY</h1>
+                <p>Glimpses into Hawkins and beyond. Witness<br>the horrors and the beauty of our world.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Gallery specific scenes -->
+                <div class="card gallery-card">
+                    <img src="Upside down.jpg" alt="The Upside Down" class="card-img">
+                    <div class="card-overlay">
+                        <h4>The Upside Down</h4>
+                    </div>
+                </div>
+                <div class="card gallery-card">
+                    <img src="Welcome.jpg" alt="Welcome to Hawkins" class="card-img">
+                    <div class="card-overlay">
+                        <h4>Welcome to Hawkins</h4>
+                    </div>
+                </div>
+                <div class="card gallery-card">
+                    <img src="Mind.jpg" alt="Castle Byers" class="card-img">
+                    <div class="card-overlay">
+                        <h4>Mind Flayer</h4>
+                    </div>
+                </div>
+                <div class="card gallery-card">
+                    <img src="Arcade.png" alt="Strategy Session" class="card-img">
+                    <div class="card-overlay">
+                        <h4>The Arcade</h4>
+                    </div>
+                </div>
+                <div class="card gallery-card">
+                    <img src="Retro.jpg" alt="Retro Technology" class="card-img">
+                    <div class="card-overlay">
+                        <h4>Retro Technology</h4>
+                    </div>
+                </div>
+                <div class="card gallery-card">
+                    <img src="Gang.jpg" alt="The Party" class="card-img">
+                    <div class="card-overlay">
+                        <h4>The Party</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js.js"></script>
+</body>
+
+</html>
